@@ -42,6 +42,14 @@ import UIKit
         layer.borderColor = OEXStyles.shared().neutralBase().cgColor
         layer.cornerRadius = 0.0
         layer.masksToBounds = true
+        if isRTL {
+            textAlignment = .right
+            semanticContentAttribute = .forceRightToLeft
+        }
+    }
+    
+    private var isRTL: Bool {
+        return UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft;
     }
 }
 

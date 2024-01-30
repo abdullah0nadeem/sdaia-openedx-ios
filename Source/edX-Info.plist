@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>edX</string>
+	<string>SDAIA</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
@@ -49,23 +49,16 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>org.edx.mobile</string>
+				<string>learn-stage.tndy.academy</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookDisplayName</key>
-	<string>edX</string>
+	<string>SDAIA</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
-    <key>NSLocalNetworkUsageDescription</key>
-    <string>${PRODUCT_NAME} uses the local network to discover Cast-enabled devices on your WiFi
-        network.</string>
-    <key>NSBonjourServices</key>
-    <array>
-        <string>_googlecast._tcp</string>
-        <string>_CC1AD845._googlecast._tcp</string>
-    </array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -82,12 +75,20 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_googlecast._tcp</string>
+		<string>_CC1AD845._googlecast._tcp</string>
+	</array>
 	<key>NSCalendarsUsageDescription</key>
-	<string>edX would like to use your calendar list to subscribe to your personalized edX calendar for this course.</string>
+	<string>SDAIA would like to use your calendar list to subscribe to your personalized edX calendar for this course.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>so you can take a picture for a profile image</string>
 	<key>NSContactsUsageDescription</key>
 	<string>so you can save a contact</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>${PRODUCT_NAME} uses the local network to discover Cast-enabled devices on your WiFi
+        network.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>so app can use user location</string>
 	<key>NSMicrophoneUsageDescription</key>
@@ -113,6 +114,13 @@
 		<string>RobotoMono-Regular.ttf</string>
 		<string>RobotoMono-Light.ttf</string>
 		<string>RobotoMono-Bold.ttf</string>
+		<string>IBMPlexSansArabic-Bold.ttf</string>
+		<string>IBMPlexSansArabic-ExtraLight.ttf</string>
+		<string>IBMPlexSansArabic-Light.ttf</string>
+		<string>IBMPlexSansArabic-Medium.ttf</string>
+		<string>IBMPlexSansArabic-Regular.ttf</string>
+		<string>IBMPlexSansArabic=SemiBold.ttf</string>
+		<string>IBMPlexSansArabic-Thin.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

@@ -16,7 +16,7 @@ public enum ProgramScreen {
 
 class ProgramsViewController: UIViewController, InterfaceOrientationOverriding, PullRefreshControllerDelegate, ScrollableDelegateProvider {
     
-    typealias Environment = OEXAnalyticsProvider & OEXConfigProvider & OEXSessionProvider & OEXRouterProvider & ReachabilityProvider & OEXStylesProvider & NetworkManagerProvider
+    typealias Environment = OEXAnalyticsProvider & OEXConfigProvider & OEXSessionProvider & OEXRouterProvider & ReachabilityProvider & OEXStylesProvider & NetworkManagerProvider & OEXInterfaceProvider
     
     private let environment: Environment
     private(set) var programsURL: URL
@@ -103,7 +103,18 @@ extension ProgramsViewController: WebViewNavigationDelegate {
     
     func webView(_ webView: WKWebView, shouldLoad request: URLRequest) -> Bool {
         guard let url = request.url else { return true }
-        return !DiscoveryHelper.navigate(to: url, from: self, bottomBar: nil, environment: environment)
+        switch DiscoveryHelper.urlAction(from: url) {
+        case .enrolledCourseDetail:
+            let courseID = DiscoveryHelper.parse(url: url)?.courseId ?? ""
+            if environment.interface?.enrollmentForCourse(withID: courseID) != nil {
+                return !DiscoveryHelper.navigate(to: url, from: self, bottomBar: nil, environment: environment)
+            } else {
+                showBottomActionSnackBar(message: Strings.courseContentNotAvailable, textSize: .small, duration: 2)
+            }
+            return false
+        default:
+            return !DiscoveryHelper.navigate(to: url, from: self, bottomBar: nil, environment: environment)
+        }
     }
     
     func webViewContainingController() -> UIViewController {

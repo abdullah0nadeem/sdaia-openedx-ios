@@ -11,20 +11,20 @@ import Foundation
 class OEXFontsDataFactory {
     
     static let fonts = [
-        "regular":"Inter-Regular",
-        "semiBold":"Inter-SemiBold",
-        "semiBoldItalic":"Inter-SemiboldItalic",
-        "bold":"Inter-Bold",
-        "boldItalic":"Inter-BoldItalic",
-        "extraBold":"Inter-ExtraBold",
-        "extraBoldItalic":"Inter-ExtraBoldItalic",
-        "light":"Inter-Light",
-        "lightItalic":"Inter-LightItalic",
-        "italic":"Inter-Italic",
+        "regular": "IBMPlexSansArabic-Regular",
+        "semiBold": "IBMPlexSansArabic-SemiBold",
+        "semiBoldItalic": "IBMPlexSansArabic-SemiBold",
+        "bold": "IBMPlexSansArabic-Bold",
+        "boldItalic": "IBMPlexSansArabic-Bold",
+        "extraBold": "IBMPlexSansArabic-ExtraBold",
+        "extraBoldItalic": "IBMPlexSansArabic-ExtraBold",
+        "light": "IBMPlexSansArabic-Light",
+        "lightItalic": "IBMPlexSansArabic-Light",
+        "italic": "IBMPlexSansArabic-Regular",
 
-        "secondary-Light":"RobotoMono-Light",
-        "secondary-Regular":"RobotoMono-Regular",
-        "secondary-SemiBold":"RobotoMono-SemiBold",
-        "secondary-Bold":"RobotoMono-Bold"
+        "secondary-Light": "IBMPlexSansArabic-Light",
+        "secondary-Regular": "IBMPlexSansArabic-Regular",
+        "secondary-SemiBold": "IBMPlexSansArabic-SemiBold",
+        "secondary-Bold": "IBMPlexSansArabic-Bold"
     ]
 }

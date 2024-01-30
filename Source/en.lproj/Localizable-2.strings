@@ -75,3 +75,165 @@
 "COURSE_OUTLINE_HEADER.GATED_CONTENT_TITLE"="Some content in this part of the course is locked for upgraded users only.";
 /* None option in the caption list to de select caption language*/
 "NONE"="None";
+/* Nafath name*/
+"NAFATH_NAME"="Nafath";
+/* Nafath ID*/
+"NAFATH_ID"="Nafath ID";
+/* Nafath Pin*/
+"NAFATH_PIN"="Nafath Pin";
+/* Authenticate with Nafath App*/
+"NAFATH_AUTHENTICATE_WITH_APP"="Authenticate with Nafath App";
+/* Authenticate with Nafath App*/
+"NAFATH_AUTHENTICATING"="Authenticating";
+/* Nafath registration fullname*/
+"NAFATH_REGISTERATION_FULLNAME"="Full name";
+/* Nafath registration public username*/
+"NAFATH_REGISTERATION_PUBLIC_USERNAME"="Public username";
+/* Nafath registration email*/
+"NAFATH_REGISTERATION_EMAIL"="Email";
+/* Nafath registration phone*/
+"NAFATH_REGISTERATION_PHONE"="Phone";
+/* Nafath registration city*/
+"NAFATH_REGISTERATION_CITY"="City";
+/* Nafath registration address line*/
+"NAFATH_REGISTERATION_ADDRESS_LINE"="Address line (Optional)";
+/* Nafath registration job title*/
+"NAFATH_REGISTERATION_JOB_TITLE"="Job Title";
+/* Nafath registration gender*/
+"NAFATH_REGISTERATION_GENDER"="Gender";
+/* Nafath registration gender male*/
+"NAFATH_REGISTERATION_MALE"="Male";
+/* Nafath registration gender female*/
+"NAFATH_REGISTERATION_FEMALE"="Female";
+/* Nafath registration date of birth*/
+"NAFATH_REGISTERATION_DATE_OF_BIRTH"="Date of birth";
+/* Nafath registration terms and condition policy*/
+"NAFATH_REGISTERATION_TERMS_AND_CONDITION_POLICY"="i agree to the {sdaia_terms_name}";
+/* Nafath registration sdaia terms name*/
+"SDAIA_TERMS_NAME"="SDAIA terms and conditions policy";
+/* Nafath registration account creation*/
+"NAFATH_ACCOUNT_CREATION"="Proceed account creation for free";
+/* Nafath registration activation code*/
+"NAFATH_ACTIVATION_CODE"="Activation Code";
+/* Nafath registration complete registration*/
+"NAFATH_COMPLETE_REGISTRATION"="Complete Registration";
+/* Nafath select region*/
+"NAFATH_SELECT_REGION"="Select your region";
+/* Nafath region Riyadh*/
+"NAFATH.REGION.RIYADH"="Riyadh";
+/* Nafath region Eastern*/
+"NAFATH.REGION.EASTERN"="Eastern";
+/* Nafath region Asir*/
+"NAFATH.REGION.ASIR"="Asir";
+/* Nafath region Jazan*/
+"NAFATH.REGION.JAZAN"="Jazan";
+/* Nafath region Medina*/
+"NAFATH.REGION.MEDINA"="Medina";
+/* Nafath region Al-Qassim*/
+"NAFATH.REGION.ALQASSIM"="Al-Qassim";
+/* Nafath region Tabuk*/
+"NAFATH.REGION.TABUK"="Tabuk";
+/* Nafath region Ha'il*/
+"NAFATH.REGION.HAIL"="Ha'il";
+/* Nafath region Najran*/
+"NAFATH.REGION.NAJRAN"="Najran";
+/* Nafath region Al-Jawf*/
+"NAFATH.REGION.ALJAWAF"="Al-Jawf";
+/* Nafath region Al-Bahah*/
+"NAFATH.REGION.ALBAHAH"="Al-Bahah";
+/* Nafath region Northern Borders*/
+"NAFATH.REGION.NORTHERN_BORDERS"="Northern Borders";
+/* Nafath select education*/
+"NAFATH_SELECT_EDUCATION"="Select Level of Education";
+/* Nafath middle school education level*/
+"NAFATH.EDUCATION.LEVEL.MIDDLE"="Middle School";
+/* Nafath high school education level*/
+"NAFATH.EDUCATION.LEVEL.HIGH"="High School";
+/* Nafath diploma education level*/
+"NAFATH.EDUCATION.LEVEL.DIPLOMA"="Diploma";
+/* Nafath bachelor education level*/
+"NAFATH.EDUCATION.LEVEL.BACHELOR"="Bachelor";
+/* Nafath master education level*/
+"NAFATH.EDUCATION.LEVEL.MASTER"="Master";
+/* Nafath phd education level*/
+"NAFATH.EDUCATION.LEVEL.PHD"="Ph.D.";
+/* Nafath select english level*/
+"NAFATH_SELECT_ENGLISH_LANGUAGE_LEVEL"="Select your english language level";
+/* Nafath 0 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.zero"="0";
+/* Nafath 1 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.one"="1";
+/* Nafath 2 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.two"="2";
+/* Nafath 3 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.three"="3";
+/* Nafath 4 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.four"="4";
+/* Nafath 5 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.five"="5";
+/* Nafath 6 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.six"="6";
+/* Nafath 7 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.seven"="7";
+/* Nafath 8 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.eight"="8";
+/* Nafath 9 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.nine"="9";
+/* Nafath 10 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.ten"="10";
+/* Nafath select employment status level*/
+"NAFATH_SELECT_EMPLOYMENT_LEVEL"="Select Employment Status";
+/* Nafath public industry employment status level*/
+"NAFATH.EMPLOYMENT_LEVEL.PUBLIC_INDUSTRY"="Public industry";
+/* Nafath private industry employment status level*/
+"NAFATH.EMPLOYMENT_LEVEL.PRIVATE_INDUSTRY"="Private industry";
+/* Nafath job seeker employment status level*/
+"NAFATH.EMPLOYMENT_LEVEL.JOB_SEEKER"="Job seeker";
+/* Nafath student employment status level*/
+"NAFATH.EMPLOYMENT_LEVEL.Student"="Student";
+/* Nafath select work experience level*/
+"NAFATH_SELECT_WORK_EXPERIENCE_LEVEL"="Select Work Experience Level";
+/* Nafath junior work experience level*/
+"NAFATH.WORK.EXPERIENC_LEVEL.JUNIOR"="Junior level (0-2) years";
+/* Nafath middle work experience level*/
+"NAFATH.WORK.EXPERIENC_LEVEL.MIDDLE"="Middle level (3-4) years";
+/* Nafath senior work experience level*/
+"NAFATH.WORK.EXPERIENC_LEVEL.SENIOR"="Senior level (5-10) years";
+/* Nafath expert work experience level*/
+"NAFATH.WORK.EXPERIENC_LEVEL.EXPERT"="Expert (+ 10 years)";
+/* Nafath error fullname*/
+"NAFATH_ERROR.FULLNAME"="Enter your full name";
+/* Nafath error city*/
+"NAFATH_ERROR.CITY"="Enter the City Where you live";
+/* Nafath error email*/
+"NAFATH_ERROR.EMAIL"="Enter a valid email address";
+/* Nafath error phone*/
+"NAFATH_ERROR.PHONE"="Enter your phone number";
+/* Nafath error date of birth*/
+"NAFATH_ERROR.DATE_OF_BIRTH"="Enter your date of birth";
+/* Nafath error select region*/
+"NAFATH_ERROR.SELECT_REGION"="Select your Region";
+/* Nafath error select education*/
+"NAFATH_ERROR.SELECT_EDUCTAION"="Select your level of education";
+/* Nafath error select employment*/
+"NAFATH_ERROR.SELECT_EMPLOYMENT"="Select your employment status";
+/* Nafath error select work experienece*/
+"NAFATH_ERROR.SELECT_WORK_EXPERIENCE"="Select your work experience level";
+/* Nafath error job title*/
+"NAFATH_ERROR.JOB_TITLE"="Enter your current job title";
+/* Nafath error username range*/
+"NAFATH_ERROR.USERNAME_RANGE"="Username must be between 3 and 30 characters";
+/* Nafath error username validate*/
+"NAFATH_ERROR.USERNAME_VALIDATE"="Username can only contains (A-Z, a-z), numerals (0-9), underscores (_), and hypens (-). Usernames cannot contains spaces.";
+/* Nafath error terms and condition*/
+"NAFATH_ERROR.TERMS_AND_CONDITION"="Please agree our terms and condition policy.";
+/* Nafath error activation code*/
+"NAFATH_ERROR.ACTIVATION_CODE"="Enter the activation code that is sent to you via email";
+/* Nafath error enter nafath id*/
+"NAFATH_ERROR.ENTER_NAFATH_ID"="Please enter your Nafath ID and try again.";
+/* Nafath error unexpected error occured */
+"NAFATH_ERROR.UNEXPECTED"="An unexpected error occur.";
+/* optional string title */
+"OPTIONAL"="(Optional)";
+/* Done title */
+"DONE_TITLE"="Done";

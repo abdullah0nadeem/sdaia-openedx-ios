@@ -181,6 +181,11 @@
         } else if ([[encoding name] isEqualToString:OEXVideoEncodingYoutube] && OEXConfig.sharedConfig.youtubeVideoConfig.enabled) {
             isSupportedEncoding = true;
             break;
+        } 
+        //TODO: - Need to verify it from backend and also need to fix it.
+        else if ([[encoding name] isEqualToString:OEXVideoEncodingFallback]) {
+            isSupportedEncoding = true;
+            break;
         }
     }
     

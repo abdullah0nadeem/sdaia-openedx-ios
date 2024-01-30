@@ -296,6 +296,12 @@ static OEXStyles* sSharedStyles;
     return [self neutralXDark];
 }
 
+#pragma mark Gray Colors
+
+- (UIColor*)lightGray {
+    return [self.oexColors colorForIdentifier:ColorsIdentifiersLightGray];
+}
+
 #pragma mark - Fonts
 
 - (UIFont*)regularFontOfSize:(CGFloat)size {

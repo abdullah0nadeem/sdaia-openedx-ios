@@ -2,10 +2,10 @@
     "primaryXXLightColor":"#475B65",
     "primaryXLightColor":"#2D494E",
     "primaryLightColor":"#0E3639",
-    "primaryBaseColor":"#00262B",
+    "primaryBaseColor":"#EA6852",
     "primaryDarkColor":"#002121",
 
-    "secondaryBaseColor":"#D23228",
+    "secondaryBaseColor":"#1C345E",
     "secondaryDarkColor":"#D23228",
 
     "accentAColor":"#03C7E8",
@@ -49,5 +49,7 @@
     "infoLight":"#1C8DBE",
     "infoBase":"#0A7DA3",
     "infoDark":"#004972",
-    "infoXDark":"#002F4A"
+    "infoXDark":"#002F4A",
+    
+    "lightGray": "#c1c1c1",
 }

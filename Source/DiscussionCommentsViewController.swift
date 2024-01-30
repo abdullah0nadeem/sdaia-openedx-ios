@@ -185,6 +185,7 @@ class DiscussionCommentCell: UITableViewCell {
         updateReportText(button: commentCountOrReportIconButton, report: comment.abuseFlagged)
         DiscussionHelper.styleAuthorDetails(author: comment.author, authorLabel: comment.authorLabel, createdAt: comment.createdAt, hasProfileImage: comment.hasProfileImage, imageURL: comment.imageURL, authoNameLabel: authorNameLabel, dateLabel: dateLabel, authorButton: authorButton, imageView: authorProfileImage, viewController: viewController, router: viewController.environment.router)
         
+        commentCountOrReportIconButton.isHidden = comment.author == OEXSession.shared()?.currentUser?.username
         commentCountOrReportIconButton.oex_removeAllActions()
         commentCountOrReportIconButton.oex_addAction({[weak viewController] _ -> Void in
             

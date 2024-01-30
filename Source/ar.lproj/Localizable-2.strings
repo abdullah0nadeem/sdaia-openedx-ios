@@ -79,3 +79,164 @@
 "COURSE_OUTLINE_HEADER.GATED_CONTENT_TITLE"="Some content in this part of the course is locked for upgraded users only.";
 /* None option in the caption list to de select caption language*/
 "NONE"="None";
+/* Nafath name*/
+"NAFATH_NAME"="نفاذ";
+/* Nafath ID*/
+"NAFATH_ID"="رقم الهوية في نفاذ";
+/* Nafath Pin*/
+"NAFATH_PIN"="نفاذ";
+/* Authenticate with Nafath App*/
+"NAFATH_AUTHENTICATE_WITH_APP"="المصادقة عبر تطبيق نفاذ";
+/* Authenticate with Nafath App*/
+"NAFATH_AUTHENTICATING"="المصادقة";
+/* Nafath registration fullname*/
+"NAFATH_REGISTERATION_FULLNAME"="الاسم الكامل";
+/* Nafath registration public username*/
+"NAFATH_REGISTERATION_PUBLIC_USERNAME"="اسم المستخدم العامّ";
+/* Nafath registration email*/
+"NAFATH_REGISTERATION_EMAIL"="البريد الإلكتروني";
+/* Nafath registration phone*/
+"NAFATH_REGISTERATION_PHONE"="رقم الجوال";
+/* Nafath registration city*/
+"NAFATH_REGISTERATION_CITY"="مدينة";
+/* Nafath registration address line*/
+"NAFATH_REGISTERATION_ADDRESS_LINE"="خط عنوان (اختياري)";
+/* Nafath registration job title*/
+"NAFATH_REGISTERATION_JOB_TITLE"="مسمى وظيفي";
+/* Nafath registration gender*/
+"NAFATH_REGISTERATION_GENDER"="جنس";
+/* Nafath registration gender male*/
+"NAFATH_REGISTERATION_MALE"="ذكر";
+/* Nafath registration gender female*/
+"NAFATH_REGISTERATION_FEMALE"="أنثى";
+/* Nafath registration date of birth*/
+"NAFATH_REGISTERATION_DATE_OF_BIRTH"="تاريخ الميلاد";
+/* Nafath registration terms and condition policy*/
+"NAFATH_REGISTERATION_TERMS_AND_CONDITION_POLICY"="أوافق على {sdaia_terms_name}";
+/* Nafath registration sdaia terms name*/
+"SDAIA_TERMS_NAME"="سدايا شروط الخدمة ";
+/* Nafath registration account creation*/
+"NAFATH_ACCOUNT_CREATION"="متابعة إنشاء حساب مجاني";
+/* Nafath registration activation code*/
+"NAFATH_ACTIVATION_CODE"="إلى بريدك الإلكتروني";
+/* Nafath registration complete registration*/
+"NAFATH_COMPLETE_REGISTRATION"="تم إكمال عملية التسجيل";
+"NAFATH_SELECT_REGION"="حدد منطقتك";
+/* Nafath region Riyadh*/
+"NAFATH.REGION.RIYADH"="الرياض";
+/* Nafath region Eastern*/
+"NAFATH.REGION.EASTERN"="المنطقة الشرقية";
+/* Nafath region Asir*/
+"NAFATH.REGION.ASIR"="عسير";
+/* Nafath region Jazan*/
+"NAFATH.REGION.JAZAN"="جازان";
+/* Nafath region Medina*/
+"NAFATH.REGION.MEDINA"="المدينة المنورة";
+/* Nafath region Al-Qassim*/
+"NAFATH.REGION.ALQASSIM"="القصيم";
+/* Nafath region Tabuk*/
+"NAFATH.REGION.TABUK"="تبوك";
+/* Nafath region Ha'il*/
+"NAFATH.REGION.HAIL"="حائل";
+/* Nafath region Najran*/
+"NAFATH.REGION.NAJRAN"="نجران";
+/* Nafath region Al-Jawf*/
+"NAFATH.REGION.ALJAWAF"="الجوف";
+/* Nafath region Al-Bahah*/
+"NAFATH.REGION.ALBAHAH"="الباحة";
+/* Nafath region Northern Borders*/
+"NAFATH.REGION.NORTHERN_BORDERS"="الحدود الشمالية";
+/* Nafath select education*/
+"NAFATH_SELECT_EDUCATION"="اختر المستوى التعليمي";
+/* Nafath middle school education level*/
+"NAFATH.EDUCATION.LEVEL.MIDDLE"="المرحلة المتوسطة";
+/* Nafath high school education level*/
+"NAFATH.EDUCATION.LEVEL.HIGH"="المرحلة الثانوية";
+/* Nafath diploma education level*/
+"NAFATH.EDUCATION.LEVEL.DIPLOMA"="دبلوم";
+/* Nafath bachelor education level*/
+"NAFATH.EDUCATION.LEVEL.BACHELOR"="بكالوريوس";
+/* Nafath master education level*/
+"NAFATH.EDUCATION.LEVEL.MASTER"="ماجستير";
+/* Nafath phd education level*/
+"NAFATH.EDUCATION.LEVEL.PHD"="دكتوراة";
+/* Nafath select english level*/
+"NAFATH_SELECT_ENGLISH_LANGUAGE_LEVEL"="حدد مستوى اللغة الإنجليزية الخاص بك";
+/* Nafath 0 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.zero"="0";
+/* Nafath 1 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.one"="1";
+/* Nafath 2 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.two"="2";
+/* Nafath 3 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.three"="3";
+/* Nafath 4 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.four"="4";
+/* Nafath 5 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.five"="5";
+/* Nafath 6 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.six"="6";
+/* Nafath 7 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.seven"="7";
+/* Nafath 8 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.eight"="8";
+/* Nafath 9 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.nine"="9";
+/* Nafath 10 english language level*/
+"NAFATH.ENGLISH.LANGUAGE_LEVEL.ten"="10";
+/* Nafath select employment status level*/
+"NAFATH_SELECT_EMPLOYMENT_LEVEL"="اختر الحالة الوظيفية";
+/* Nafath public industry employment status level*/
+"NAFATH.EMPLOYMENT_LEVEL.PUBLIC_INDUSTRY"="قطاع عام";
+/* Nafath private industry employment status level*/
+"NAFATH.EMPLOYMENT_LEVEL.PRIVATE_INDUSTRY"="قطاع خاص";
+/* Nafath job seeker employment status level*/
+"NAFATH.EMPLOYMENT_LEVEL.JOB_SEEKER"="باحث عن عمل";
+/* Nafath student employment status level*/
+"NAFATH.EMPLOYMENT_LEVEL.Student"="طالب";
+/* Nafath select work experience level*/
+"NAFATH_SELECT_WORK_EXPERIENCE_LEVEL"="مستوى الخبرة العملية";
+/* Nafath junior work experience level*/
+"NAFATH.WORK.EXPERIENC_LEVEL.JUNIOR"="المستوى المبتدئ (2-0) سنوات";
+/* Nafath middle work experience level*/
+"NAFATH.WORK.EXPERIENC_LEVEL.MIDDLE"="المستوى المتوسط (4-3) سنوات";
+/* Nafath senior work experience level*/
+"NAFATH.WORK.EXPERIENC_LEVEL.SENIOR"="المستوى المتقدم (10-5) سنوات";
+/* Nafath expert work experience level*/
+"NAFATH.WORK.EXPERIENC_LEVEL.EXPERT"="خبير (أكثر من  10+) سنوات";
+/* Nafath error fullname*/
+"NAFATH_ERROR.FULLNAME"="أدخل اسمك الكامل";
+/* Nafath error city*/
+"NAFATH_ERROR.CITY"="أدخل مدينة إقامتك";
+/* Nafath error email*/
+"NAFATH_ERROR.EMAIL"="أدخل عنوان بريد إلكتروني صحيح";
+/* Nafath error phone*/
+"NAFATH_ERROR.PHONE"="أدخل رقم هاتفك";
+/* Nafath error date of birth*/
+"NAFATH_ERROR.DATE_OF_BIRTH"="أدخل يوم ميلادك";
+/* Nafath error select region*/
+"NAFATH_ERROR.SELECT_REGION"="حدد منطقتك";
+/* Nafath error select education*/
+"NAFATH_ERROR.SELECT_EDUCTAION"="حدد مستواك التعليمي";
+/* Nafath error select employment*/
+"NAFATH_ERROR.SELECT_EMPLOYMENT"="حدد حالتك الوظيفية";
+/* Nafath error select work experienece*/
+"NAFATH_ERROR.SELECT_WORK_EXPERIENCE"="حدد مستوى خبرتك العملية";
+/* Nafath error job title*/
+"NAFATH_ERROR.JOB_TITLE"="أدخل المسمى الوظيفي الحالي لك";
+/* Nafath error username range*/
+"NAFATH_ERROR.USERNAME_RANGE"="يجب أن يتكون اسم المستخدم من 3 إلى 30 حرفًا";
+/* Nafath error username validate*/
+"NAFATH_ERROR.USERNAME_VALIDATE"="يمكن أن يحتوي اسم المستخدم فقط على (A-Z، a-z)، والأرقام (0-9)، والشرطات السفلية (_)، والواصلات (-). لا يمكن أن تحتوي أسماء المستخدمين على مسافات.";
+/* Nafath error terms and condition*/
+"NAFATH_ERROR.TERMS_AND_CONDITION"="يرجى الموافقة على سياسة الشروط والأحكام الخاصة بنا.";
+/* Nafath error activation code*/
+"NAFATH_ERROR.ACTIVATION_CODE"="أدخل رمز التفعيل المرسل إلى بريك الإلكتروني";
+/* Nafath error enter nafath id*/
+"NAFATH_ERROR.ENTER_NAFATH_ID"="الرجاء إدخال معرف نفاذ الخاص بك والمحاولة مرة أخرى.";
+/* Nafath error unexpected error occured */
+"NAFATH_ERROR.UNEXPECTED"="حدوث خطأ غير متوقع.";
+/* optional string title */
+"OPTIONAL"="(خياري)";
+/* Done tile */
+"DONE_TITLE"="منتهي";

@@ -125,7 +125,11 @@ OEXRegistrationViewControllerDelegate
     self.logistrationCompletion = completion;
    UIViewController *topMostController = [[UIApplication sharedApplication] topMostController];
       if ([topMostController isKindOfClass:[OEXLoginViewController class]] == NO) {
-          [self presentViewController:[self loginViewController] fromController:[[UIApplication sharedApplication] topMostController] completion:completion];
+          if (self.environment.config.isEDXEnabled) {
+              [self presentViewController:[self loginViewController] fromController:[[UIApplication sharedApplication] topMostController] completion:completion];
+          } else {
+              completion();
+          }
       }
 }
 
@@ -161,7 +165,6 @@ OEXRegistrationViewControllerDelegate
         [blockSelf showSplash];
         blockSelf.logistrationCompletion = nil;
     }];
-    
 }
 
 - (void)showAnnouncementsForCourseWithID:(NSString *)courseID {

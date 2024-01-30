@@ -1,4 +1,7 @@
 # Uncomment this line to define a global platform for your project
+use_modular_headers!
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
+
 platform :ios, '13.0'
 
 source 'https://cdn.cocoapods.org/'

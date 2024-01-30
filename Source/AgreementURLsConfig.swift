@@ -76,10 +76,11 @@ class AgreementURLsConfig : NSObject {
 
         if !eula.isEmpty || !tos.isEmpty || !privacyPolicy.isEmpty { }
         else {
-            localURLs = true
-            eula = Bundle.main.path(forResource: AgreementURLsKeys.eulaURL.bundlePath, ofType: "htm") ?? ""
-            tos = Bundle.main.path(forResource: AgreementURLsKeys.tosURL.bundlePath, ofType: "htm") ?? ""
-            privacyPolicy = Bundle.main.path(forResource: AgreementURLsKeys.privacyPolicyURL.bundlePath, ofType: "htm") ?? ""
+            //TODO: - Disabled for now
+//            localURLs = true
+//            eula = Bundle.main.path(forResource: AgreementURLsKeys.eulaURL.bundlePath, ofType: "htm") ?? ""
+//            tos = Bundle.main.path(forResource: AgreementURLsKeys.tosURL.bundlePath, ofType: "htm") ?? ""
+//            privacyPolicy = Bundle.main.path(forResource: AgreementURLsKeys.privacyPolicyURL.bundlePath, ofType: "htm") ?? ""
         }
     }
 

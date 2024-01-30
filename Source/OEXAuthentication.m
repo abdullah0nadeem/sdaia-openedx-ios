@@ -59,21 +59,21 @@ OEXNSDataTaskRequestHandler OEXWrapURLCompletion(OEXURLRequestHandler completion
     [request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
     NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig];
     [[session dataTaskWithRequest:request completionHandler:^(NSData* data, NSURLResponse* response, NSError* error) {
-            NSHTTPURLResponse* httpResp = (NSHTTPURLResponse*) response;
-            if(httpResp.statusCode == OEXHTTPStatusCode200OK) {
-                NSError* error;
-                NSDictionary* dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                OEXAccessToken* token = [[OEXAccessToken alloc] initWithTokenDetails:dictionary];
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [OEXAuthentication handleSuccessfulLoginWithToken:token completionHandler:completionBlock];
-                });
-            }
-            else {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    completionBlock(data, httpResp, error);
-                });
-            }
-        }]resume];
+        NSHTTPURLResponse* httpResp = (NSHTTPURLResponse*) response;
+        if(httpResp.statusCode == OEXHTTPStatusCode200OK) {
+            NSError* error;
+            NSDictionary* dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            OEXAccessToken* token = [[OEXAccessToken alloc] initWithTokenDetails:dictionary];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [OEXAuthentication handleSuccessfulLoginWithToken:token completionHandler:completionBlock];
+            });
+        }
+        else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionBlock(data, httpResp, error);
+            });
+        }
+    }]resume];
 }
 
 + (void)executePOSTRequestWithPath:(NSString*)path parameters:(NSDictionary*)parameters completion:(OEXURLRequestHandler)completion {
@@ -163,7 +163,7 @@ OEXNSDataTaskRequestHandler OEXWrapURLCompletion(OEXURLRequestHandler completion
 //// This methods is used to get user details when user access token is available
 - (void)getUserDetailsWith:(OEXAccessToken*)edxToken completionHandler:(OEXURLRequestHandler)completionBlock {
     self.edxToken = edxToken;
-
+    
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession* session = [NSURLSession sessionWithConfiguration:config
                                                           delegate:self
@@ -197,7 +197,7 @@ OEXNSDataTaskRequestHandler OEXWrapURLCompletion(OEXURLRequestHandler completion
     NSMutableURLRequest* mutablerequest = [request mutableCopy];
     NSString* authValue = [NSString stringWithFormat:@"%@ %@", self.edxToken.tokenType, self.edxToken.accessToken];
     [mutablerequest setValue:authValue forHTTPHeaderField:@"Authorization"];
-
+    
     completionHandler([mutablerequest copy]);
 }
 
@@ -224,8 +224,8 @@ OEXNSDataTaskRequestHandler OEXWrapURLCompletion(OEXURLRequestHandler completion
             }
         }
         dispatch_async(dispatch_get_main_queue(), ^{
-                OEXWrapURLCompletion(completionHandler)(userdata, userresponse, usererror);
-            });
+            OEXWrapURLCompletion(completionHandler)(userdata, userresponse, usererror);
+        });
     }];
 }
 
@@ -239,6 +239,100 @@ OEXNSDataTaskRequestHandler OEXWrapURLCompletion(OEXURLRequestHandler completion
     [request setHTTPBody:[postString dataUsingEncoding:NSUTF8StringEncoding]];
     NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
     [[session dataTaskWithRequest:request completionHandler:OEXWrapURLCompletion(handler)]resume];
+}
+
+#pragma mark Nafath Login/Registration Methods
+
++ (void)initiateNafathWithID:(nonnull NSString *)nafathId
+           completionHandler:(OEXURLRequestHandler)completionBlock {
+    NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
+    [parameters setSafeObject:nafathId forKey:@"nafath_id"];
+    [parameters setSafeObject:@"true" forKey:@"is_mobile_app"];
+    [self executeNafathPOSTRequestWithPath:URL_INITIATE_NAFATH_REQUEST
+                                parameters:parameters
+                                completion:completionBlock];
+}
+
++ (void)nafathCheckStatusWithID:(nonnull NSString *)nafathId
+                  transactionID:(nonnull NSString *)transID
+                       userData:(NSDictionary * _Nullable)data
+              completionHandler:(nonnull OEXURLRequestHandler)completionBlock {
+    
+    NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
+    [parameters setSafeObject:nafathId forKey:@"nafath_id"];
+    [parameters setSafeObject:transID forKey:@"trans_id"];
+    [parameters setSafeObject:@"true" forKey:@"is_mobile_app"];
+    if (data) {
+        [parameters setSafeObject:data forKey:@"user_data"];
+    }
+    
+    [self executeNafathPOSTRequestWithPath:URL_NAFATH_CHECK_STATUS
+                                parameters:parameters
+                                completion:completionBlock];
+}
+
++ (void)nafathRegisterUserWithID:(nonnull NSString *)nafathId transactionID:(nonnull NSString *)transID userData:(nonnull NSDictionary *)data completionHandler:(nonnull OEXURLRequestHandler)completionBlock {
+    
+    NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
+    [parameters setSafeObject:nafathId forKey:@"nafath_id"];
+    [parameters setSafeObject:transID forKey:@"trans_id"];
+    [parameters setSafeObject:@"true" forKey:@"is_mobile_app"];
+    [parameters setSafeObject:[[OEXConfig sharedConfig] oauthClientID] forKey:@"client_id"];
+    if (data) {
+        [parameters setSafeObject:data forKey:@"user_data"];
+    }
+    
+    [self executeNafathPOSTRequestWithPath:URL_NAFATH_REGISTER_USER
+                                parameters:parameters
+                                completion:completionBlock];
+}
+
++ (void) requestTokenWithNafathID:(nonnull NSString *)nafathId transactionID:(nonnull NSString *)transID completionHandler:(nonnull OEXURLRequestHandler)completionBlock {
+    NSMutableDictionary* parameters = [[NSMutableDictionary alloc] init];
+    [parameters setSafeObject:nafathId forKey:@"nafath_id"];
+    [parameters setSafeObject:transID forKey:@"trans_id"];
+    [parameters setSafeObject:@"true" forKey:@"is_mobile_app"];
+    [parameters setSafeObject:[[OEXConfig sharedConfig] oauthClientID] forKey:@"client_id"];
+    
+    [self executeNafathPOSTRequestWithPath:URL_NAFATH_GET_JWT_TOKEN
+                                parameters:parameters 
+                                completion:^(NSData * _Nullable data, NSHTTPURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSHTTPURLResponse* httpResp = (NSHTTPURLResponse*) response;
+        if (httpResp.statusCode == OEXHTTPStatusCode200OK) {
+            NSError* error;
+            NSDictionary* dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            OEXAccessToken* token = [[OEXAccessToken alloc] initWithTokenDetails:dictionary];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [OEXAuthentication handleSuccessfulLoginWithToken:token completionHandler:completionBlock];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionBlock(data, httpResp, error);
+            });
+        }
+    }];
+}
+
+
++ (void)executeNafathPOSTRequestWithPath:(NSString*)path parameters:(NSDictionary*)parameters completion:(OEXURLRequestHandler)completion {
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:nil];
+    
+    NSURL* hostURL = [[OEXConfig sharedConfig] apiHostURL];
+    NSURL* endpoint = [NSURL URLWithString:path relativeToURL:hostURL];
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:endpoint];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
+    [request setValue:@"application/json, text/plain, */*" forHTTPHeaderField:@"Accept"];
+    [request setHTTPMethod:@"POST"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:jsonData];
+    
+    NSURLSessionConfiguration* sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession* session = [NSURLSession sessionWithConfiguration:sessionConfig];
+    
+    [[session dataTaskWithRequest:request completionHandler:OEXWrapURLCompletion(completion)] resume];
 }
 
 @end
