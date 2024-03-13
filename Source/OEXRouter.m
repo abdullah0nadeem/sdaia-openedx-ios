@@ -125,7 +125,7 @@ OEXRegistrationViewControllerDelegate
     self.logistrationCompletion = completion;
    UIViewController *topMostController = [[UIApplication sharedApplication] topMostController];
       if ([topMostController isKindOfClass:[OEXLoginViewController class]] == NO) {
-          if (self.environment.config.isEDXEnabled) {
+          if (self.environment.config.isEDXEnabled && self.environment.config.isRegistrationEnabled) {
               [self presentViewController:[self loginViewController] fromController:[[UIApplication sharedApplication] topMostController] completion:completion];
           } else {
               completion();

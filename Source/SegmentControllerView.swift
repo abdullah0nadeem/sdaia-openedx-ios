@@ -98,7 +98,7 @@ class SegmentControllerView: UIView {
 extension SegmentControllerView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        if OEXConfig.shared().isEDXEnabled {
+        if !OEXConfig.shared().isEDXEnabled {
             return Segment.allCases.filter { $0 != .edx }.count
         }
         return Segment.allCases.count

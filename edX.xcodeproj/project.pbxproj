@@ -4614,7 +4614,9 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/Appboy-iOS-SDK/AppboyUI.NewsFeed.bundle",
 				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInAppMessaging/InAppMessagingDisplayResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher_Core_Privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleSignIn/GoogleSignIn.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle",
 				"${PODS_ROOT}/YoutubePlayer-in-WKWebView/WKYTPlayerView/WKYTPlayerView.bundle",
 				"${PODS_ROOT}/google-cast-sdk-no-bluetooth-xcframework/GoogleCast.xcframework/GoogleCastCoreResources.bundle",
 				"${PODS_ROOT}/google-cast-sdk-no-bluetooth-xcframework/GoogleCast.xcframework/GoogleCastUIResources.bundle",
@@ -4628,7 +4630,9 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppboyUI.NewsFeed.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/InAppMessagingDisplayResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMSessionFetcher_Core_Privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SDWebImage.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WKYTPlayerView.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastCoreResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastUIResources.bundle",
@@ -5676,7 +5680,7 @@
 				CODE_SIGN_ENTITLEMENTS = edX.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = " ";
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 8UV2GNZ2BB;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "$(inherited)";
@@ -6155,7 +6159,7 @@
 				CODE_SIGN_ENTITLEMENTS = edX.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = " ";
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 8UV2GNZ2BB;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "$(inherited)";
@@ -6245,7 +6249,7 @@
 				CODE_SIGN_ENTITLEMENTS = edX.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = " ";
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 8UV2GNZ2BB;
 				ENABLE_BITCODE = NO;
 				EXCLUDED_ARCHS = "$(inherited)";
