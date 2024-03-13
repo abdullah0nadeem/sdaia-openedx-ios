@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// but the actual valid email regex from the RFC is a nightmare
 - (BOOL)oex_isValidEmailAddress;
 
+- (BOOL)oex_isValidUsername;
+
+- (BOOL)oex_isEmpty;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -21,7 +21,7 @@ public class OEXColors: NSObject {
         successXXLight, successXLight, successLight, successBase, successXDark, successDark,
         warningXXLight, warningXLight, warningLight, warningBase, warningDark, warningXDark,
         errorXXLight, errorXLight, errorLight, errorBase, errorDark, errorXDark,
-        infoXXLight, infoXLight, infoLight, infoBase, infoDark, infoXDark,
+        infoXXLight, infoXLight, infoLight, infoBase, infoDark, infoXDark, lightGray,
         randomColor
     }
     
@@ -154,6 +154,8 @@ public class OEXColors: NSObject {
             return "infoDark"
         case .infoXDark:
             return "infoXDark"
+        case .lightGray:
+            return "lightGray"
         case .randomColor:
             fallthrough
         default:

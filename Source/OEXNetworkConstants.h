@@ -37,4 +37,9 @@
 #define URL_COURSE_ENROLLMENT_EMAIL_OPT_IN @"/api/user_api/v1/preferences/email_opt_in"
 #define SIGN_UP_URL @"/user_api/{version}/account/registration/"
 
+#define URL_INITIATE_NAFATH_REQUEST  @"/nafath/api/v1/initiate_request"
+#define URL_NAFATH_CHECK_STATUS  @"/nafath/api/v1/check_status"
+#define URL_NAFATH_REGISTER_USER @"/nafath/api/v1/register_user"
+#define URL_NAFATH_GET_JWT_TOKEN @"/nafath/api/v1/get_jwt_tokens"
+
 #endif

@@ -195,6 +195,7 @@ class NewCourseDashboardViewController: UIViewController, InterfaceOrientationOv
                 loadStateController.state = .Loaded
                 self.error = error
                 headerView.showTabbarView(show: false)
+                setupConstraints()
                 setupContentView()
             }
         }

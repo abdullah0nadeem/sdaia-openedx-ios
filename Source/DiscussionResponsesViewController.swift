@@ -247,7 +247,7 @@ class DiscussionResponseCell: UITableViewCell {
 
 
 class DiscussionResponsesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DiscussionNewCommentViewControllerDelegate, DiscussionCommentsViewControllerDelegate, InterfaceOrientationOverriding {
-    typealias Environment = NetworkManagerProvider & OEXRouterProvider & OEXConfigProvider & OEXAnalyticsProvider & DataManagerProvider & OEXStylesProvider
+    typealias Environment = NetworkManagerProvider & OEXRouterProvider & OEXConfigProvider & OEXAnalyticsProvider & DataManagerProvider & OEXStylesProvider & OEXSessionProvider
 
     enum TableSection : Int {
         case Post = 0
@@ -604,6 +604,7 @@ class DiscussionResponsesViewController: UIViewController, UITableViewDataSource
         }
         
         // vote a post (thread) - User can only vote on post and response not on comment.
+        cell.voteButton.isHidden = thread?.author == environment.session.currentUser?.username
         cell.voteButton.oex_removeAllActions()
         cell.voteButton.oex_addAction({[weak self] (action : AnyObject!) -> Void in
             if let owner = self, let button = action as? DiscussionCellButton, let thread = owner.thread {
@@ -626,6 +627,7 @@ class DiscussionResponsesViewController: UIViewController, UITableViewDataSource
             }, for: UIControl.Event.touchUpInside)
         
         // follow a post (thread) - User can only follow original post, not response or comment.
+        cell.followButton.isHidden = thread?.author == environment.session.currentUser?.username
         cell.followButton.oex_removeAllActions()
         cell.followButton.oex_addAction({[weak self] (sender : AnyObject!) -> Void in
             if let owner = self, let thread = owner.thread {
@@ -650,6 +652,7 @@ class DiscussionResponsesViewController: UIViewController, UITableViewDataSource
         }
         
         // report (flag) a post (thread) - User can report on post, response, or comment.
+        cell.reportButton.isHidden = thread?.author == environment.session.currentUser?.username
         cell.reportButton.oex_removeAllActions()
         cell.reportButton.oex_addAction({[weak self] (action : AnyObject!) -> Void in
             if let owner = self, let item = owner.thread {
@@ -740,6 +743,7 @@ class DiscussionResponsesViewController: UIViewController, UITableViewDataSource
         
         cell.voteButton.indexPath = indexPath
         // vote/unvote a response - User can vote on post and response not on comment.
+        cell.voteButton.isHidden = thread?.author == environment.session.currentUser?.username
         cell.voteButton.oex_removeAllActions()
         cell.voteButton.oex_addAction({[weak self] (action : AnyObject!) -> Void in
             
@@ -759,6 +763,7 @@ class DiscussionResponsesViewController: UIViewController, UITableViewDataSource
         
         cell.reportButton.indexPath = indexPath
         // report (flag)/unflag a response - User can report on post, response, or comment.
+        cell.reportButton.isHidden = thread?.author == environment.session.currentUser?.username
         cell.reportButton.oex_removeAllActions()
         cell.reportButton.oex_addAction({[weak self] (action : AnyObject!) -> Void in
             let apiRequest = DiscussionAPI.flagComment(abuseFlagged: !response.abuseFlagged, commentID: response.commentID)

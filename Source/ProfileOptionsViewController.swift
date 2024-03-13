@@ -297,7 +297,7 @@ extension ProfileOptionsViewController: UITableViewDelegate {
         switch options[indexPath.row] {
         case .personalInformation:
             guard environment.config.profilesEnabled, let _ = environment.session.currentUser?.username else { return }
-            environment.router?.showProfileEditorFromController(controller: self)
+            // environment.router?.showProfileEditorFromController(controller: self)
             environment.analytics.trackProfileOptionClcikEvent(displayName: AnalyticsDisplayName.PersonalInformationClicked, name: AnalyticsEventName.PersonalInformationClicked)
         default:
             return
@@ -815,7 +815,7 @@ class PersonalInformationCell: UITableViewCell {
         
         chevronImageView.snp.remakeConstraints { make in
             make.height.equalTo(imageSize)
-            make.width.equalTo(imageSize)
+            make.width.equalTo(0.0)
             make.centerY.equalTo(contentView)
             make.trailing.equalTo(contentView).inset(StandardHorizontalMargin)
         }

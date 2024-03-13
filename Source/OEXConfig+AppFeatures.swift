@@ -90,6 +90,10 @@ extension OEXConfig {
     var isNewComponentNavigationEnabled: Bool {
         return bool(forKey: "NEW_COMPONENT_NAVIGATION_ENABLED", defaultValue: true) && isNewDashboardEnabled
     }
+    
+    @objc var isEDXEnabled: Bool {
+        return bool(forKey: "IS_EDX_ENABLED",  defaultValue: false)
+    }
 }
 
 

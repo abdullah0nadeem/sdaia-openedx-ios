@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,22 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginScreenImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="4H8-iD-oMh">
-                                <rect key="frame" x="20" y="377" width="374" height="142"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nafath-logo" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-WV-u57">
+                                <rect key="frame" x="96.5" y="402" width="221.5" height="92"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nKd-WV-u57">
-                                <rect key="frame" x="136.5" y="408.5" width="141" height="79.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered-by-sdaia" translatesAutoresizingMaskIntoConstraints="NO" id="zFk-4S-83n">
+                                <rect key="frame" x="98" y="807" width="218" height="37"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.10980392160000001" green="0.20392156859999999" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nKd-WV-u57" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8Zy-7j-x1j"/>
                             <constraint firstItem="nKd-WV-u57" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="LM0-Zo-sNE"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="4H8-iD-oMh" secondAttribute="trailing" constant="20" id="N32-BQ-L7d"/>
-                            <constraint firstItem="4H8-iD-oMh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SU2-ZA-jo4"/>
-                            <constraint firstItem="4H8-iD-oMh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YD8-Jm-qHR"/>
-                            <constraint firstItem="4H8-iD-oMh" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" id="by2-it-0SX"/>
+                            <constraint firstItem="zFk-4S-83n" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hNL-xZ-NJP"/>
+                            <constraint firstAttribute="bottom" secondItem="zFk-4S-83n" secondAttribute="bottom" constant="52" id="k0G-wj-KiY"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -41,7 +39,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loginScreenImage.png" width="320" height="142"/>
-        <image name="logo.png" width="141" height="79.5"/>
+        <image name="nafath-logo" width="221.5" height="92"/>
+        <image name="powered-by-sdaia" width="218" height="37"/>
     </resources>
 </document>

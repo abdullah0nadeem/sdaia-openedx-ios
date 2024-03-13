@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SegmentControllerCell" id="gTV-IL-0wX" customClass="SegmentControllerCell" customModule="edX" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1N-Xa-JZY">
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="48"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Title"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Title"/>
+                        <connections>
+                            <action selector="didSegmentTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="fgg-93-dE1"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAJ-DO-Sgx">
+                        <rect key="frame" x="0.0" y="48" width="225" height="2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="ltn-xk-eUx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="PAJ-DO-Sgx" firstAttribute="top" secondItem="l1N-Xa-JZY" secondAttribute="bottom" id="9GX-ix-XP7"/>
+                <constraint firstItem="l1N-Xa-JZY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Bi4-1i-w6e"/>
+                <constraint firstAttribute="bottom" secondItem="PAJ-DO-Sgx" secondAttribute="bottom" id="GGw-si-8ig"/>
+                <constraint firstAttribute="trailing" secondItem="l1N-Xa-JZY" secondAttribute="trailing" id="GhA-Wc-CaG"/>
+                <constraint firstAttribute="trailing" secondItem="PAJ-DO-Sgx" secondAttribute="trailing" id="Iq6-Ot-37n"/>
+                <constraint firstItem="PAJ-DO-Sgx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JKM-uf-8zj"/>
+                <constraint firstItem="l1N-Xa-JZY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xh0-Zs-wJF"/>
+            </constraints>
+            <size key="customSize" width="225" height="50"/>
+            <connections>
+                <outlet property="dividerView" destination="PAJ-DO-Sgx" id="CUa-DY-eAq"/>
+                <outlet property="segmentButton" destination="l1N-Xa-JZY" id="d00-iX-GF3"/>
+            </connections>
+            <point key="canvasLocation" x="46.564885496183201" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

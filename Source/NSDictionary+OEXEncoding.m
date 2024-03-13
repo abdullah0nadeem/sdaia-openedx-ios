@@ -15,8 +15,10 @@
     NSMutableString* result = [[NSMutableString alloc] init];
     __block NSUInteger remaining = self.count;
     [self enumerateKeysAndObjectsUsingBlock:^(NSString* key, NSString* value, BOOL* stop) {
+#if DEBUG
         NSAssert([key isKindOfClass:[NSString class]], @"Form keys should be strings");
-        NSAssert([key isKindOfClass:[NSString class]], @"Form values should be strings");
+        NSAssert([value isKindOfClass:[NSString class]], @"Form values should be strings");
+#endif
         [result appendString:key.oex_stringByUsingFormEncoding];
         [result appendString:@"="];
         [result appendString:value.oex_stringByUsingFormEncoding];

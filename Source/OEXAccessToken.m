@@ -81,7 +81,9 @@ static NSString* const OEXTokenCreationDateKey = @"creation_date";
     NSError* error = nil;
     NSData* data = [NSPropertyListSerialization dataWithPropertyList:dict format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
     if(error) {
+#ifdef DEBUG
         NSAssert(NO, @"AccessTokenData error => %@ ", [error description]);
+#endif
         return nil;
     }
     return data;

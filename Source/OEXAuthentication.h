@@ -33,6 +33,24 @@ typedef void (^ OEXURLRequestHandler)(NSData* _Nullable data, NSHTTPURLResponse*
 
 + (void)registerUserWithApiVersion:(NSString*)apiVersion paramaters:(NSDictionary*)parameters completionHandler:(OEXURLRequestHandler)handler;
 
+#pragma mark Nafath APIs
++ (void)initiateNafathWithID:(NSString*)nafathId
+           completionHandler:(OEXURLRequestHandler)completionBlock;
+
++ (void)nafathCheckStatusWithID:(NSString*)nafathId
+                  transactionID:(NSString*)transID
+                       userData:(NSDictionary* _Nullable)data
+           completionHandler:(OEXURLRequestHandler)completionBlock;
+
++ (void)nafathRegisterUserWithID:(NSString*)nafathId
+                   transactionID:(NSString*)transID
+                        userData:(NSDictionary*)data
+            completionHandler:(OEXURLRequestHandler)completionBlock;
+
++ (void) requestTokenWithNafathID:(nonnull NSString *)nafathId
+                    transactionID:(nonnull NSString *)transID
+                completionHandler:(nonnull OEXURLRequestHandler)completionBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

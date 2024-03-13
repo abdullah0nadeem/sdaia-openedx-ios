@@ -139,6 +139,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIColor*)disabledButtonColor;
 
+#pragma mark Gray Colors
+
+- (UIColor*)lightGray;
+
 @end
 
 @protocol OEXStylesProvider <NSObject>
