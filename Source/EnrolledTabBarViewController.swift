@@ -124,6 +124,7 @@ class EnrolledTabBarViewController: UITabBarController, InterfaceOrientationOver
         }
         viewControllers = controllers
         tabBar.isHidden = (tabBarItems.count == 1)
+        tabBar.tintColor = OEXStyles.shared().secondaryBaseColor()
     }
     
     // MARK: Deep Linking
